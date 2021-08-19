@@ -3,7 +3,7 @@ let myImage = document.querySelector('img');
 myImage.onclick = function() {
     let mySrc = myImage.getAttribute('src');
     if(mySrc === 'images/cc-vs-ls.png') {
-      myImage.setAttribute('src','images/in-vivo-rp-3.png');
+      myImage.setAttribute('src','images/in-vivo-rp.png');
     } else {
       myImage.setAttribute('src','images/cc-vs-ls.png');
     }
@@ -18,7 +18,7 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.textContent = 'Mozilla is cool, ' + myName;
+    myHeading.textContent = "You're wasting your time, " + myName;
   }
 }
 
@@ -26,7 +26,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla is cool, ' + storedName;
+  myHeading.textContent = "You're wasting your time, " + storedName;
 }
 
 myButton.onclick = function() {
